@@ -1,0 +1,67 @@
+<div class="block block-dashboard-referrer">
+	<div class="box-content">Die Kunden ID ist für Sie, damit diese an die von Ihnen angeworbenen Personen weitergegeben werden kann. Sie wird bei der Anmeldung im Feld "Kunden-ID" eingetragen.</div>
+	<br>
+    <div class="block-title"><strong><?php /* @escapeNotVerified */ echo __('Info') ?></strong></div>
+    <div class="block-content">
+        <div class="box box-information">
+            <strong class="box-title">
+                <span><?php /* @escapeNotVerified */ echo __('Ihre Kunden-ID') ?></span>
+            </strong>
+            <div class="box-content">
+                <p>
+                    <?php echo $block->escapeHtml($block->get_custom_id()) ?><br>
+                </p>
+            </div>
+        </div>
+        <div class="box box-information">
+            <strong class="box-title">
+                <span><?php /* @escapeNotVerified */ echo __('Stufe') ?></span>
+            </strong>
+            <div class="box-content">
+                <p>
+					<?php $level = $block->escapeHtml($block->get_level());
+					echo ($level == 0) ? 'A' : $level;
+					?>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="block-title"><strong><?php /* @escapeNotVerified */ echo __('Umsatz') ?></strong></div>
+    <div class="block-content">
+        <div class="box box-information">
+            <strong class="box-title">
+                <span><?php /* @escapeNotVerified */ echo __('Eigener Umsatz') ?></span>
+            </strong>
+            <div class="box-content">
+                <p>
+                    <?php echo $block->escapeHtml(number_format($block->getCustomer()->ownSales(), 2, ".", ",") . "€") ?><br>
+                </p>
+            </div>
+        </div>
+        <div class="box box-information">
+            <strong class="box-title">
+                <span><?php /* @escapeNotVerified */ echo __('Angeworbene Personen Umsatz') ?></span>
+            </strong>
+            <div class="box-content">
+                <p>
+          <?php echo $block->escapeHtml(number_format($block->getChildSales(), 2, ".", ",") . "€") ?><br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="block-title"><strong><?php /* @escapeNotVerified */ echo __('Provision') ?></strong></div>
+    <div class="block-content">
+        <div class="box box-information">
+            <strong class="box-title">
+                <span><?php /* @escapeNotVerified */ echo __('Provision') ?></span>
+            </strong>
+            <div class="box-content">
+                <p>
+                    <?php echo $block->escapeHtml(number_format($block->getCustomer()->getBonus(), 2, ".", ",") . "€") ?><br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

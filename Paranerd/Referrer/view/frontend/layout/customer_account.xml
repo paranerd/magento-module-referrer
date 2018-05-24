@@ -1,0 +1,10 @@
+<body>
+    <referenceBlock name="customer_account_navigation">
+        <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-promotion">
+            <arguments>
+				<argument name="path" xsi:type="string">promotion/customer</argument>
+                <argument name="label" xsi:type="string" translate="true">Bonussystem</argument>
+            </arguments>
+        </block>
+    </referenceBlock>
+</body>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<event name="sales_order_invoice_save_after">
+		<observer name="paranerd_invoice_save" instance="Paranerd\Referrer\Observer\InvoiceSave" />
+	</event>
+	<event name="order_delete_after">
+		<observer name="paranerd_order_delete" instance="Paranerd\Referrer\Observer\OrderRemove" />
+	</event>
+	<event name="order_cancel_after">
+		<observer name="paranerd_order_cancel" instance="Paranerd\Referrer\Observer\OrderRemove" />
+	</event>
+	<event name="checkout_onepage_controller_success_action">
+		<observer name="paranerd_order_place" instance="Paranerd\Referrer\Observer\OrderPlace" />
+	</event>
+</config>

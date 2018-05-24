@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Account\Dashboard\Info $block */
+?>
+<div class="block block-dashboard-referrer">
+    <div class="block-title"><strong><?php /* @escapeNotVerified */ echo __('Ihre Kunden-Nummer (Kunden ID)') ?></strong></div>
+    <div class="block-content">
+        <div class="box-title">
+            <span><?php /* @escapeNotVerified */ echo __('Die Kunden ID ist für Sie, damit diese an die von Ihnen angeworbenen Personen weitergegeben werden kann. Sie wird bei der Anmeldung im Feld "Kunden-ID" eingetragen.') ?></span>
+        </div>
+        <strong class="box-content">
+            <p>
+                <?php echo $block->escapeHtml($block->get_custom_id()) ?><br>
+            </p>
+        </strong>
+    </div>
+</div>

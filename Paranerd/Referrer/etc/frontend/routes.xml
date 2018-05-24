@@ -1,0 +1,11 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+	<router id="standard">
+		<!--<route id="referrerlink" frontName="referrerlink">
+			<module name="Paranerd_Referrer" />
+		</route>-->
+
+		<route id="promotion" frontName="promotion">
+			<module name="Paranerd_Referrer" />
+		</route>
+	</router>
+</config>

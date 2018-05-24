@@ -1,0 +1,35 @@
+<?php
+	// Something
+?>
+<div>
+	Click to update customer levels<br>
+</div>
+<div class="page-actions">
+    <div class="page-actions-inner">
+        <div class="page-actions-buttons">
+            <form
+                action="<?php /* @escapeNotVerified */ echo $block->getUrl('customer/update/start'); ?>"
+                method="post">
+                <input
+                    name="form_key"
+                    type="hidden"
+                    value="<?php /* @escapeNotVerified */ echo $block->getFormKey(); ?>"/>
+                <button
+                    class="action-primary"
+                    id="update-start"
+                    type="submit"
+                    title="Refresh Data">
+                    <?php /* @escapeNotVerified */ echo __('Start Update') ?>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+	require(['jquery'], function($) {
+		$("#update-start").click(function() {
+			$(this).attr('disabled', true).text("Updating...");
+		});
+	})
+</script>

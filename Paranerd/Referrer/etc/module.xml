@@ -1,0 +1,8 @@
+<config>
+	<module name="Paranerd_Referrer" schema_version="1.46" setup_version="1.46">
+		<sequence>
+			<module name="Magento_Customer"/>
+			<module name="Magento_Backend"/>
+		</sequence>
+	</module>
+</config>
